@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LoginFolder.LoginActivity" android:background="@color/whiteColor">
+    <com.kakao.usermgmt.LoginButton android:id="@+id/com_kakao_login" android:visibility="gone" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:layout_marginBottom="30dp" android:layout_weight="1"/>
+    <com.nhn.android.naverlogin.ui.view.OAuthLoginButton android:id="@+id/buttonOAuthLoginImg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="50dp"/>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent">
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp" app:srcCompat="@drawable/main_logo"
+                            android:id="@+id/imageView3" android:layout_centerInParent="false"
+                            android:layout_marginTop="50dp" android:layout_marginStart="15dp"
+                            android:layout_marginEnd="15dp"/>
+                </RelativeLayout>
+                <TextView
+                        android:text="SNS 계정으로 간편하게 이용하세요."
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/textView" android:textSize="12sp"
+                        android:gravity="center"/>
+                <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" android:layout_marginLeft="25dp"
+                            android:layout_marginRight="25dp" android:padding="15dp">
+                        <RelativeLayout
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                            <ImageView
+                                    android:id="@+id/instaBtn"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_centerInParent="true"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/login_insta" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                            <ImageView
+                                    android:id="@+id/naverBtn"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_centerInParent="true"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/login_naver" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                            <ImageView
+                                    android:id="@+id/kakaoBtn"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_centerInParent="true"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/login_kakao" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:inputType="textEmailAddress"
+                    android:ems="10"
+                    android:id="@+id/emailEdit" android:layout_marginLeft="60dp" android:layout_marginRight="60dp"
+                    android:background="@drawable/grayborder_white_box" android:textColor="@color/blackColor"
+                    android:textSize="13sp" android:gravity="center_vertical" android:paddingLeft="15dp"
+                    android:paddingRight="15dp" android:hint="이메일"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:ems="10"
+                    android:id="@+id/passEdit" android:layout_marginLeft="60dp" android:layout_marginRight="60dp"
+                    android:background="@drawable/grayborder_white_box" android:textColor="@color/blackColor"
+                    android:textSize="13sp" android:gravity="center_vertical" android:paddingLeft="15dp"
+                    android:paddingRight="15dp" android:hint="비밀번호" android:layout_below="@+id/emailEdit"
+                    android:layout_marginTop="10dp" android:password="true"/>
+            <TextView
+                    android:text="비밀번호가 맞지 않습니다."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/errorLabel"
+                    android:layout_below="@+id/passEdit" android:padding="15dp" android:textSize="11sp"
+                    android:textColor="@color/identityColor" android:gravity="center" android:visibility="invisible"/>
+            <Button
+                    android:text="로그인"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp" android:id="@+id/loginBtn"
+                    android:layout_below="@+id/errorLabel" android:background="@color/blackColor"
+                    android:layout_marginLeft="60dp" android:layout_marginRight="60dp" android:textSize="14sp"
+                    android:textColor="@color/whiteColor"/>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp" android:layout_below="@+id/loginBtn" android:layout_marginLeft="60dp"
+                    android:layout_marginRight="60dp" android:gravity="center_horizontal|center_vertical">
+                <TextView
+                        android:text="회원가입"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/registerBtn" android:textSize="12sp"
+                        android:textColor="@color/borderLineColor" android:padding="13dp"/>
+                <View
+                        android:layout_width="1dp"
+                        android:layout_height="10dp" android:id="@+id/view"
+                        android:background="@color/borderLineColor"/>
+                <TextView
+                        android:text="아이디/비밀번호 찾기"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/findBtn" android:textSize="12sp"
+                        android:textColor="@color/borderLineColor" android:padding="13dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+                android:layout_weight="1.3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <Button
+                    android:id="@+id/noneStartBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginRight="80dp"
+                    android:background="@drawable/grayborder_white_box"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:text="비회원으로 시작하기"
+                    android:textColor="@color/borderLineColor"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/whiteColor"
+        android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="15dp"
+                android:gravity="top"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:id="@+id/pView"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop" />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/txtLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/gothica1_regular"
+                        android:lineSpacingExtra="5dp"
+                        android:text="ㅇㅇㅇㅇㅇ 인플루언서의 새 상품 린넨 자켓 펜츠 쎄트가 등록되었습니다."
+                        android:textColor="@color/blackColor"
+                        android:textSize="12sp" />
+
+                <TextView
+                        android:id="@+id/dateLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/gothica1_regular"
+                        android:text="TextView"
+                        android:textColor="@color/borderLineColor"
+                        android:textSize="10sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+                android:id="@+id/view31"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lineColor" />
+    </LinearLayout>
+</LinearLayout>

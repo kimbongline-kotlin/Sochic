@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/lineColor"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+            <TextView
+                    android:id="@+id/nameLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="TextView"
+                    android:textColor="@color/blackColor"
+                    android:textStyle="normal"
+                    android:typeface="normal" />
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+            <TextView
+                    android:id="@+id/priceLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="135dp"
+                    android:layout_marginRight="35dp"
+                    android:gravity="right"
+                    android:text="TextView"
+                    android:textColor="@color/blackColor"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    android:typeface="normal" />
+
+            <ImageView
+                    android:id="@+id/removeBtn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/delete" />
+
+            <RelativeLayout
+                    android:layout_width="120dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:background="@color/whiteColor">
+
+                <View
+                        android:id="@+id/view22"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@id/pBtn"
+                        android:background="@color/lineColor" />
+
+                <View
+                        android:id="@+id/view21"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/mBtn"
+                        android:background="@color/lineColor" />
+
+                <TextView
+                        android:id="@+id/cntLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_toLeftOf="@id/pBtn"
+                        android:layout_toRightOf="@id/mBtn"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="@color/blackColor"
+                        android:textSize="14sp" />
+
+                <TextView
+                        android:id="@+id/mBtn"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textColor="@color/blackColor"
+                        android:textSize="12sp" />
+
+                <TextView
+                        android:id="@+id/pBtn"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:text="+"
+                        android:textColor="@color/blackColor"
+                        android:textSize="12sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

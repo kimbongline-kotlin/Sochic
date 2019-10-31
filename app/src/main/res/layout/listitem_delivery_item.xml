@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+            <TextView
+                    android:id="@+id/modifyBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/gothica1_regular"
+                    android:text="수정 / 삭제"
+                    android:textColor="@color/blackColor"
+                    android:textSize="12sp" />
+
+            <View
+                    android:id="@+id/view24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_alignStart="@id/modifyBtn"
+                    android:layout_alignEnd="@id/modifyBtn"
+                    android:layout_alignBottom="@id/modifyBtn"
+                    android:background="@color/blackColor" />
+
+            <RadioButton
+                    android:id="@+id/nameLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentEnd="false"
+                    android:layout_centerVertical="true"
+                    android:button="@drawable/radio_btn"
+                    android:fontFamily="@font/gothica1_regular"
+                    android:paddingLeft="10dp"
+                    android:text="이름"
+                    android:textSize="14sp" />
+        </RelativeLayout>
+
+        <TextView
+                android:id="@+id/infoLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/gothica1_regular"
+                android:text="TextView"
+                android:textColor="@color/borderLineColor"
+                android:textSize="12sp" />
+    </LinearLayout>
+</LinearLayout>

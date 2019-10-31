@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/whiteColor"
+        tools:context=".ProductFolder.ProductMainActivity">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="60dp">
+
+            <ImageView
+                    android:id="@+id/profileView"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop" />
+
+            <TextView
+                    android:id="@+id/nickLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginRight="100dp"
+                    android:textSize="13sp" />
+
+            <TextView
+                    android:id="@+id/followBtn"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/grayborder_white_box"
+                    android:gravity="center"
+                    android:text="팔로우"
+                    android:textColor="@color/borderLineColor"
+                    android:textSize="12sp" />
+        </RelativeLayout>
+
+        <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="false"
+                android:padding="15dp"
+                app:srcCompat="@drawable/back" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="60dp"
+            android:fillViewport="true"
+            android:overScrollMode="never">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:ignore="WebViewLayout">
+
+            <androidx.percentlayout.widget.PercentRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <RelativeLayout
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        app:layout_aspectRatio="100%"
+                        app:layout_widthPercent="100%">
+
+                    <com.youth.banner.Banner
+                            android:id="@+id/sImageView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:image_scale_type="center_crop"></com.youth.banner.Banner>
+
+                </RelativeLayout>
+            </androidx.percentlayout.widget.PercentRelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <TextView
+                        android:id="@+id/likeLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginRight="110dp"
+                        android:textSize="12sp" />
+
+                <ImageView
+                        android:id="@+id/saveBtn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
+                        android:padding="5dp"
+                        app:srcCompat="@drawable/save_icon" />
+
+                <ImageView
+                        android:id="@+id/shareBtn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="55dp"
+                        android:padding="5dp"
+                        app:srcCompat="@drawable/share" />
+
+                <ImageView
+                        android:id="@+id/likeBtn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:padding="5dp"
+                        app:srcCompat="@drawable/like_icon" />
+            </RelativeLayout>
+
+            <TextView
+                    android:id="@+id/titleLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="14sp" />
+
+            <TextView
+                    android:id="@+id/textLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="5dp"
+                    android:text="TextView"
+                    android:textColor="@color/borderLineColor"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp">
+
+                <TextView
+                        android:id="@+id/saleLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:textColor="@color/identityColor" />
+
+                <TextView
+                        android:id="@+id/priceLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_toRightOf="@id/saleLabel"
+                        android:textColor="@color/borderLineColor"
+                        android:textSize="12sp" />
+
+                <View
+                        android:id="@+id/view62"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:layout_alignLeft="@id/priceLabel"
+                        android:layout_alignRight="@id/priceLabel"
+                        android:layout_centerVertical="true"
+                        android:background="@color/borderLineColor" />
+
+                <TextView
+                        android:id="@+id/timerLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                    android:id="@+id/couponView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"
+                    android:visibility="gone">
+
+                <Button
+                        android:id="@+id/cpnDownBtn"
+                        android:layout_width="80dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/category_select_layer"
+                        android:text="쿠폰다운"
+                        android:textSize="12sp" />
+            </LinearLayout>
+
+            <View
+                    android:id="@+id/view19"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lineColor" />
+
+            <RelativeLayout
+                    android:id="@+id/oneBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="100dp"
+                        android:text="상품설명 및 코멘트"
+                        android:textColor="@color/blackColor"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                <ImageView
+                        android:id="@+id/oneArrow"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="10dp"
+                        app:srcCompat="@drawable/arrow_icon" />
+            </RelativeLayout>
+
+            <WebView
+                    android:id="@+id/oneWebView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible" />
+
+            <View
+                    android:id="@+id/view18"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lineColor" />
+
+            <RelativeLayout
+                    android:id="@+id/twoBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="100dp"
+                        android:text="사진"
+                        android:textColor="@color/blackColor"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                <ImageView
+                        android:id="@+id/twoGridBtn"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="50dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        app:srcCompat="@drawable/grid_icon" />
+
+                <ImageView
+                        android:id="@+id/twoArrow"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="10dp"
+                        app:srcCompat="@drawable/arrow_icon" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/twoRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible" />
+
+            <View
+                    android:id="@+id/view17"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lineColor" />
+
+            <RelativeLayout
+                    android:id="@+id/threeBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="100dp"
+                        android:text="REVIEW"
+                        android:textColor="@color/blackColor"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                <ImageView
+                        android:id="@+id/threeArrow"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="10dp"
+                        app:srcCompat="@drawable/arrow_icon" />
+            </RelativeLayout>
+
+            <LinearLayout
+                    android:id="@+id/threeLayer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/tHoriRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/tVertiRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                <Button
+                        android:id="@+id/allReviewBtn"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="15dp"
+                        android:background="@drawable/category_select_layer"
+                        android:text="리뷰 전체 보기" />
+            </LinearLayout>
+
+            <View
+                    android:id="@+id/view16"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lineColor" />
+
+            <RelativeLayout
+                    android:id="@+id/fourBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="100dp"
+                        android:text="상품정보고시"
+                        android:textColor="@color/blackColor"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                <ImageView
+                        android:id="@+id/fourArrow"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="10dp"
+                        app:srcCompat="@drawable/arrow_icon" />
+            </RelativeLayout>
+
+            <WebView
+                    android:id="@+id/fourWebView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            <View
+                    android:id="@+id/view15"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lineColor" />
+
+            <RelativeLayout
+                    android:id="@+id/fiveBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="100dp"
+                        android:text="Q&amp;A"
+                        android:textColor="@color/blackColor"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                <ImageView
+                        android:id="@+id/fiveArrow"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="10dp"
+                        app:srcCompat="@drawable/arrow_icon" />
+            </RelativeLayout>
+
+            <LinearLayout
+                    android:id="@+id/fiveLayer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                <Button
+                        android:id="@+id/contactWriteBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="60dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="@drawable/category_select_layer"
+                        android:text="문의하기" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/fiveRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <View
+                    android:id="@+id/view14"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lineColor" />
+
+            <RelativeLayout
+                    android:id="@+id/sixBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="100dp"
+                        android:text="배송 / 교환 / 반품정보"
+                        android:textColor="@color/blackColor"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                <ImageView
+                        android:id="@+id/sixArrow"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="10dp"
+                        app:srcCompat="@drawable/arrow_icon" />
+            </RelativeLayout>
+
+            <WebView
+                    android:id="@+id/sixWebView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lineColor" />
+
+            <RelativeLayout
+                    android:id="@+id/sevenBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="100dp"
+                        android:text="코디 아이템"
+                        android:textColor="@color/blackColor"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                <ImageView
+                        android:id="@+id/sevenGridBtn"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="50dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        app:srcCompat="@drawable/grid_icon" />
+
+                <ImageView
+                        android:id="@+id/sevenArrow"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="10dp"
+                        app:srcCompat="@drawable/arrow_icon" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/sevenRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="70dp"
+                    android:background="@color/lineColor" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+            android:id="@+id/buyBtn"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/blackColor"
+            android:text="구매하기"
+            android:textColor="@color/whiteColor" />
+
+</RelativeLayout>

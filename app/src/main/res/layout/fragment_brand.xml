@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/fragment_gallery_0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:background="@color/whiteColor">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@+id/cord" android:layout_width="match_parent"
+                                                         android:layout_height="match_parent">
+        <com.google.android.material.appbar.AppBarLayout android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                                                         android:id="@+id/appBarLayout"
+                                                         android:layout_width="match_parent"
+                                                         android:layout_height="wrap_content"
+                                                         android:background="@color/whiteColor">
+            <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@+id/collapse_toolbar"
+                                                                        android:layout_width="match_parent"
+                                                                        android:layout_height="wrap_content"
+                                                                        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                                                                        app:titleEnabled="false">
+                <androidx.appcompat.widget.Toolbar android:gravity="top" android:id="@+id/toolbar"
+                                                   android:background="#ff0000" android:visibility="invisible"
+                                                   android:layout_width="match_parent" android:layout_height="50dp"
+                                                   android:minHeight="?attr/actionBarSize" app:layout_collapseMode="pin"
+                                                   app:layout_scrollFlags="scroll|enterAlways"
+                                                   app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+                <RelativeLayout android:id="@+id/contentLayer" android:layout_width="match_parent"
+                                android:layout_height="100dp" android:layout_marginBottom="50dp">
+                    <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp" android:layout_marginTop="60dp">
+
+                            <TextView
+                                    android:id="@+id/textView10"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/gothica1_regular"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:paddingRight="15dp"
+                                    android:text="당신이 좋아할 만한 인플루언서 브랜드를 추천해드려요!"
+                                    android:textColor="@color/borderLineColor"
+                                    android:textSize="13sp" />
+                            <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp" android:id="@+id/view3"
+                                    android:background="@color/lineColor" android:layout_alignParentBottom="true"/>
+                        </RelativeLayout>
+                        <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp">
+
+                            <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="25dp" app:srcCompat="@drawable/main_logo"
+                                    android:id="@+id/imageView7" android:layout_centerVertical="true"/>
+
+                            <ImageView
+                                    android:id="@+id/cartBtn"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_alignParentRight="true"
+                                    android:padding="15dp"
+                                    app:srcCompat="@drawable/cart" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+                <RelativeLayout android:layout_gravity="bottom" android:id="@+id/tabs"
+                                android:layout_width="match_parent" android:layout_height="50dp"
+                >
+
+                    <RelativeLayout
+                            android:id="@+id/filterBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        <TextView
+                                android:id="@+id/textView11"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="55dp"
+                                android:fontFamily="@font/gothica1_regular"
+                                android:gravity="center_vertical"
+                                android:text="더 세분화된 검색을 원한다면 필터를 사용해보세요 :)"
+                                android:textSize="12sp" />
+
+                        <ImageView
+                                android:id="@+id/filterIcon"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="5dp"
+                                android:padding="10dp"
+                                android:src="@drawable/filter_icon" />
+
+                        <View
+                                android:id="@+id/view2"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@color/lineColor" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/fRecycler"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="55dp"
+                                android:visibility="gone" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+        <androidx.core.widget.NestedScrollView android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/noneLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gothica1_light"
+                        android:gravity="center"
+                        android:padding="15dp"
+                        android:text="필터링에 해당되는 상품이 없어요 :( "
+                        android:textStyle="normal"
+                        android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>

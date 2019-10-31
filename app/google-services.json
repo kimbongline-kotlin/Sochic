@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "744725886767",
+    "firebase_url": "https://sochic-3b13d.firebaseio.com",
+    "project_id": "sochic-3b13d",
+    "storage_bucket": "sochic-3b13d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744725886767:android:fbbcbc4ceb62a137d1d3da",
+        "android_client_info": {
+          "package_name": "com.sochic.sochic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "744725886767-vjm9ar5d96jbmd7firvifkfeonv10j67.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmA07Vs2LHKW0OBrupeKClnnS_2_nKAF4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "744725886767-vjm9ar5d96jbmd7firvifkfeonv10j67.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

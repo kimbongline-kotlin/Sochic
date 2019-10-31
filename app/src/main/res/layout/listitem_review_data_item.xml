@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:hedgehog="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/whiteColor"
+        android:orientation="vertical">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginBottom="15dp">
+
+        <ImageView
+                android:id="@+id/sImageView"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/thumbnail_02"
+                app:srcCompat="@drawable/thumbnail_02" />
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/sImageView">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <com.hedgehog.ratingbar.RatingBar
+                        android:id="@+id/ratingbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:clickable="false"
+                        android:focusableInTouchMode="false"
+                        android:visibility="visible"
+                        hedgehog:clickable="true"
+                        hedgehog:halfstart="false"
+                        hedgehog:starCount="5"
+                        hedgehog:starEmpty="@drawable/review_point_off"
+                        hedgehog:starFill="@drawable/review_point_on"
+                        hedgehog:starImageHeight="25dp"
+                        hedgehog:starImagePadding="3dp"
+                        hedgehog:starImageWidth="25dp">
+
+                </com.hedgehog.ratingbar.RatingBar>
+
+                <Button
+                        android:id="@+id/rWriteBtn"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="75dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/category_select_layer"
+                        android:fontFamily="@font/gothica1_regular"
+                        android:text="리뷰작성"
+                        android:textColor="@color/blackColor"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:visibility="visible" />
+
+                <TextView
+                        android:id="@+id/sNameLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/gothica1_regular"
+                        android:text="TextView"
+                        android:textColor="@color/blackColor"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                <TextView
+                        android:id="@+id/sOptionLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/gothica1_regular"
+                        android:text="TextView"
+                        android:textColor="@color/blackColor"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+            </LinearLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentBottom="true">
+
+                <TextView
+                        android:id="@+id/sCntLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@id/sOpriceLabel"
+                        android:fontFamily="@font/gothica1_regular"
+                        android:text="TextView"
+                        android:textColor="@color/blackColor"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+                <TextView
+                        android:id="@+id/sOpriceLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@id/sPriceLabel"
+                        android:text="TextView"
+                        android:textColor="@color/borderLineColor"
+                        android:textSize="10sp" />
+
+                <View
+                        android:id="@+id/view38"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignStart="@id/sOpriceLabel"
+                        android:layout_alignEnd="@id/sOpriceLabel"
+                        android:layout_centerVertical="true"
+                        android:background="@color/borderLineColor" />
+
+                <TextView
+                        android:id="@+id/sPriceLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/gothica1_regular"
+                        android:text="TextView"
+                        android:textColor="@color/blackColor"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

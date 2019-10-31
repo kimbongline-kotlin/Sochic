@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/whiteColor"
+        android:orientation="vertical">
+
+    <androidx.percentlayout.widget.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <RelativeLayout
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                app:layout_aspectRatio="100%"
+                app:layout_widthPercent="100%">
+
+            <ImageView
+                    android:id="@+id/sImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"></ImageView>
+
+            <ImageView
+                    android:id="@+id/deleteBtn"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="5dp"
+                    android:src="@drawable/delete"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/delete" />
+
+
+        </RelativeLayout>
+    </androidx.percentlayout.widget.PercentRelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                <TextView
+                        android:id="@+id/nameLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/gothica1_regular"
+                        android:maxLines="1"
+                        android:text="상품명"
+                        android:textColor="@color/blackColor"
+                        android:textSize="14dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                <TextView
+                        android:id="@+id/saleLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/gothica1_regular"
+                        android:text="할인가"
+                        android:textColor="@color/blackColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                <TextView
+                        android:id="@+id/priceLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/saleLabel"
+                        android:fontFamily="@font/gothica1_regular"
+                        android:text="원가"
+                        android:textColor="@color/borderLineColor"
+                        android:textSize="14dp" />
+
+                <View
+                        android:id="@+id/priceView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:layout_alignLeft="@id/priceLabel"
+                        android:layout_alignRight="@id/priceLabel"
+                        android:layout_centerVertical="true"
+                        android:background="@color/borderLineColor" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

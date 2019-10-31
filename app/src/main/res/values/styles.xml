@@ -1,0 +1,57 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textViewStyle">@style/txtBlackStyle</item>
+        <item name="android:buttonStyle">@style/btnBlackStyle</item>
+        <item name="android:editTextStyle">@style/editBlackStyle</item>
+        <item name="android:radioButtonStyle">@style/radioBlackStyle</item>
+        <item name="android:textColor">@color/blackColor</item>
+        <item name="android:textColorHint">@color/borderLineColor</item>
+        <item name="android:tabWidgetStyle">@style/tab_text</item>
+        <item name="colorControlHighlight">@color/whiteColor</item>
+    </style>
+
+    <style name="TransparentCompat" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+    </style>
+
+    <style name="txtBlackStyle" parent="@android:style/Widget.DeviceDefault.TextView">
+        <item name="android:fontFamily">@font/sc_font_family</item>
+    </style>
+
+
+    <style name="btnBlackStyle" parent="@android:style/Widget.DeviceDefault.Button.Borderless">
+        <item name="android:fontFamily">@font/sc_font_family</item>
+    </style>
+
+
+    <style name="editBlackStyle" parent="@android:style/Widget.DeviceDefault.EditText">
+        <item name="android:fontFamily">@font/sc_font_family</item>
+    </style>
+
+
+
+    <style name="radioBlackStyle" parent="@android:style/Widget.DeviceDefault.CompoundButton.RadioButton">
+        <item name="android:fontFamily">@font/sc_font_family</item>
+    </style>
+    <style name="tab_text" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/sc_font_family</item>
+    </style>
+
+
+    <style name="CustomDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowMinWidthMajor">10%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+</resources>

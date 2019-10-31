@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/whiteColor"
+        >
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/writeBtn"
+            android:layout_marginTop="60dp"
+            android:fillViewport="true">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="top"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:id="@+id/textView25"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:text="Q"
+                        android:textColor="@color/borderLineColor"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                <TextView
+                        android:id="@+id/questionLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:text="TextView" />
+
+            </LinearLayout>
+
+            <View
+                    android:id="@+id/view44"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lineColor" />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:text="A"
+                        android:textColor="@color/blackColor"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                <EditText
+                        android:id="@+id/answerEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:ems="10"
+                        android:gravity="start|top"
+                        android:hint="답변을 입력해주세요."
+                        android:inputType="textMultiLine"
+                        android:minHeight="200dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingBottom="15dp"
+                        android:textColor="@color/blackColor"
+                        android:textColorHint="@color/borderLineColor"
+                        android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+            android:id="@+id/writeBtn"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/blackColor"
+            android:text="답변등록"
+            android:textColor="@color/whiteColor" />
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+        <View
+                android:id="@+id/view12"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/lineColor" />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="답변하기"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+        <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="false"
+                android:padding="15dp"
+                app:srcCompat="@drawable/back" />
+
+    </RelativeLayout>
+</RelativeLayout>

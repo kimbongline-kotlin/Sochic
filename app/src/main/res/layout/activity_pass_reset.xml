@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LoginFolder.AgreeActivity" android:background="@color/whiteColor">
+
+    <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp" app:srcCompat="@drawable/back" android:id="@+id/backBtn"
+            android:padding="10dp" android:layout_marginLeft="5dp"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" app:srcCompat="@drawable/main_logo"
+            android:id="@+id/imageView4" android:layout_centerInParent="false"
+            android:layout_marginTop="50dp" android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"/>
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/registerBtn"
+            android:layout_below="@+id/imageView4"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="30dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="80dp">
+
+            <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text="비밀번호 변경"
+                    android:textStyle="italic" />
+
+            <EditText
+                    android:id="@+id/passEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/emailEdit"
+                    android:background="@drawable/grayborder_white_box"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="비밀번호를 입력해주세요."
+                    android:imeOptions="actionNext"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:password="true"
+                    android:textColor="@color/blackColor"
+                    android:textSize="13sp" />
+
+            <EditText
+                    android:id="@+id/newPassEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/emailEdit"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/grayborder_white_box"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="입력한 비밀번호를 재입력해주세요."
+                    android:imeOptions="actionDone"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:password="true"
+                    android:textColor="@color/blackColor"
+                    android:textSize="13sp" />
+
+            <TextView
+                    android:id="@+id/passErrorLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/passEdit"
+                    android:padding="15dp"
+                    android:textColor="@color/identityColor"
+                    android:textSize="11sp"
+                    android:visibility="visible" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+            android:id="@+id/changeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/blackColor"
+            android:text="확인"
+            android:textColor="@color/whiteColor"
+            android:textSize="14sp" />
+</RelativeLayout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:hedgehog="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/whiteColor"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingRight="15dp">
+
+            <TextView
+                    android:id="@+id/rNameLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="15dp"
+                    android:text="TextView"
+                    android:textColor="@color/blackColor"
+                    android:textStyle="normal" />
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/rNickDateLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/ratingbar"
+                        android:gravity="right"
+                        android:text="TextView"
+                        android:textColor="@color/borderLineColor"
+                        android:textSize="12sp" />
+
+                <com.hedgehog.ratingbar.RatingBar
+                        android:id="@+id/ratingbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:clickable="false"
+                        android:focusableInTouchMode="false"
+                        android:longClickable="false"
+                        hedgehog:clickable="true"
+                        hedgehog:halfstart="false"
+                        hedgehog:starCount="5"
+                        hedgehog:starEmpty="@drawable/review_point_off"
+                        hedgehog:starFill="@drawable/review_point_on"
+                        hedgehog:starImageHeight="25dp"
+                        hedgehog:starImagePadding="3dp"
+                        hedgehog:starImageWidth="25dp">
+
+                </com.hedgehog.ratingbar.RatingBar>
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignTop="@id/ratingbar"
+                        android:layout_alignEnd="@id/ratingbar"
+                        android:layout_alignBottom="@id/ratingbar"
+                        android:layout_toLeftOf="@id/ratingbar">
+
+                    <Button
+                            android:id="@+id/button2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                    android:id="@+id/rTextLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="TextView"
+                    android:textColor="@color/borderLineColor"
+                    android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <ImageView
+                android:id="@+id/pImageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:visibility="visible"
+                app:srcCompat="@drawable/profile_01" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+    <TextView
+            android:id="@+id/moreBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="더보기"
+            android:textColor="@color/blackColor"
+            android:textSize="12sp" />
+
+</LinearLayout>

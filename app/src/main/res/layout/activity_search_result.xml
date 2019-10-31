@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:background="@color/whiteColor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SearchFolder.SearchKeywordActivity">
+
+    <View
+            android:id="@+id/view29"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="110dp"
+            android:background="@color/lineColor" />
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/grayborder_white_box">
+
+            <EditText
+                    android:id="@+id/keywordEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:hint="검색어를 입력해주세요."
+                    android:imeOptions="actionSearch"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/blackColor"
+                    android:textColorHint="@color/borderLineColor"
+                    android:textSize="14sp" />
+
+            <ImageView
+                    android:id="@+id/searchBtn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/search" />
+
+            <ImageView
+                    android:id="@+id/keywordDeleteBtn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/delete" />
+        </RelativeLayout>
+
+        <View
+                android:id="@+id/view12"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/lineColor" />
+
+        <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="false"
+                android:padding="15dp"
+                app:srcCompat="@drawable/back" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayer"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="false"
+            android:layout_marginTop="60dp"
+            android:background="#00000000"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/colorPrimary"
+            app:tabIndicatorHeight="1dp"
+            app:tabMode="fixed"
+            app:tabRippleColor="@color/whiteColor"
+            app:tabSelectedTextColor="@color/colorPrimary"
+            app:tabTextColor="@color/borderLineColor" />
+
+    <TextView
+            android:id="@+id/noneLabel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="111dp"
+            android:gravity="center_horizontal"
+            android:padding="20dp"
+            android:text="TextView"
+            android:textSize="12sp"
+            android:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="111dp"
+            android:visibility="visible" />
+
+</RelativeLayout>

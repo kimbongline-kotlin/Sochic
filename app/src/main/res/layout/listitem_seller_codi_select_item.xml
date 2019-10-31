@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/whiteColor"
+        android:orientation="vertical">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="15dp">
+
+        <ImageView
+                android:id="@+id/sImageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/thumbnail_02"
+                app:srcCompat="@drawable/thumbnail_02" />
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/sImageView">
+
+            <TextView
+                    android:id="@+id/sNameLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="80dp"
+                    android:fontFamily="@font/gothica1_regular"
+                    android:text="TextView"
+                    android:textColor="@color/blackColor"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            <TextView
+                    android:id="@+id/sOptionLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sNameLabel"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="80dp"
+                    android:fontFamily="@font/gothica1_regular"
+                    android:text="TextView"
+                    android:textColor="@color/blackColor"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            <RadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:button="@drawable/radio_btn"
+                    android:gravity="center" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

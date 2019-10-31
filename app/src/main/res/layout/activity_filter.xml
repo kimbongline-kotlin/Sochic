@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/whiteColor"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SearchFolder.FilterActivity">
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="60dp"
+            android:fillViewport="true">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+            <TextView
+                    android:id="@+id/textView29"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="QUICK"
+                    android:textColor="@color/blackColor"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                <TextView
+                        android:id="@+id/newBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/category_select_box"
+                        android:gravity="center"
+                        android:text="신상품순"
+                        android:textColor="@color/borderLineColor"
+                        android:textSize="12sp" />
+
+                <View
+                        android:id="@+id/view26"
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent" />
+
+                <TextView
+                        android:id="@+id/bestBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/category_select_box"
+                        android:gravity="center"
+                        android:text="인기순"
+                        android:textColor="@color/borderLineColor"
+                        android:textSize="12sp" />
+
+                <View
+                        android:id="@+id/view25"
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent" />
+
+                <TextView
+                        android:id="@+id/reviewBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/category_select_box"
+                        android:gravity="center"
+                        android:text="리뷰순"
+                        android:textColor="@color/borderLineColor"
+                        android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="AGE GROUP"
+                    android:textColor="@color/blackColor"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/ageRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="STYLE CHECK"
+                    android:textColor="@color/blackColor"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/styleRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="70dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+            android:id="@+id/applyBtn"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/blackColor"
+            android:text="적용"
+            android:textColor="@color/whiteColor" />
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+        <View
+                android:id="@+id/view12"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/lineColor" />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="필터"
+                android:textColor="@color/blackColor"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+        <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="false"
+                android:padding="15dp"
+                app:srcCompat="@drawable/popup_close" />
+
+        <Button
+                android:id="@+id/initBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="초기화"
+                android:textColor="@color/borderLineColor" />
+
+    </RelativeLayout>
+</RelativeLayout>

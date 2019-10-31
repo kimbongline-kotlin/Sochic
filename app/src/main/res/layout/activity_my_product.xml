@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/whiteColor"
+        tools:context=".MyPageFolder.MyProductActivity">
+
+    <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <View
+                android:id="@+id/view12"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/lineColor" />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="내 상품"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+        <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="false"
+                android:padding="15dp"
+                app:srcCompat="@drawable/back" />
+
+        <Button
+                android:id="@+id/allDeleteBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="전체삭제"
+                android:textColor="@color/borderLineColor"
+                android:textSize="12sp"
+                android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+        <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tabs"
+                android:fillViewport="true">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/bookRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                <LinearLayout
+                        android:id="@+id/cartLayer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="80dp"
+                        android:visibility="gone">
+
+                    <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="15dp"
+                                android:text="총 상품 금액"
+                                android:textColor="@color/blackColor"
+                                android:textStyle="bold" />
+
+                        <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/lineColor" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:orientation="vertical">
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:gravity="bottom"
+                                android:orientation="horizontal"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp">
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="상품 금액"
+                                    android:textColor="@color/blackColor"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+
+                            <TextView
+                                    android:id="@+id/b_productPriceLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="right"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="3dp"
+                                    android:text="TextView"
+                                    android:textColor="@color/blackColor"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="원"
+                                    android:textColor="@color/blackColor"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:gravity="bottom"
+                                android:orientation="horizontal"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp">
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="상품 할인"
+                                    android:textColor="@color/blackColor"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+
+                            <TextView
+                                    android:id="@+id/b_pointUseLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="right"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="3dp"
+                                    android:text="TextView"
+                                    android:textColor="@color/blackColor"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="원"
+                                    android:textColor="@color/blackColor"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:gravity="bottom"
+                                android:orientation="horizontal"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp">
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="배송비"
+                                    android:textColor="@color/blackColor"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+
+                            <TextView
+                                    android:id="@+id/b_deliveryPriceLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="right"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="3dp"
+                                    android:textColor="@color/blackColor"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="원"
+                                    android:textColor="@color/blackColor"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:gravity="bottom"
+                                android:orientation="horizontal"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp">
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="결제 예정 금액"
+                                    android:textColor="@color/blackColor"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                            <TextView
+                                    android:id="@+id/b_totalPriceLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="right"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="3dp"
+                                    android:text="TextView"
+                                    android:textColor="@color/borderLineColor"
+                                    android:textSize="14sp"
+                                    android:textStyle="normal" />
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="원"
+                                    android:textColor="@color/borderLineColor"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <RelativeLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom">
+
+            <View
+                    android:id="@+id/view32"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/lineColor" />
+
+            <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayer"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="false"
+                    android:background="#00000000"
+                    app:tabGravity="fill"
+                    app:tabIndicatorColor="@color/colorPrimary"
+                    app:tabIndicatorHeight="1dp"
+                    app:tabMode="fixed"
+                    app:tabRippleColor="@color/whiteColor"
+                    app:tabSelectedTextColor="@color/colorPrimary"
+                    app:tabTextColor="@color/borderLineColor" />
+
+        </RelativeLayout>
+
+        <Button
+                android:id="@+id/payBtn"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="15dp"
+                android:background="@color/blackColor"
+                android:text="결제하기"
+                android:textColor="@color/whiteColor"
+                android:textSize="14sp" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

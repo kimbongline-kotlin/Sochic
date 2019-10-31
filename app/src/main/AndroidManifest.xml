@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        package="com.sochic.sochic">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+            android:name=".Util.AppController"
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+            android:usesCleartextTraffic="true"
+            tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity android:name=".ProductFolder.ProductCouponActivity"
+                android:theme="@style/TransparentCompat"></activity>
+        <activity android:name=".Util.FullScreenViewActivity" />
+        <activity android:name=".MyPageFolder.ReviewWriteActivity" />
+        <activity android:name=".SellerFolder.SellerCalcurateActivity" />
+        <activity android:name=".SellerFolder.SellerNumberEditActivity" />
+        <activity android:name=".SellerFolder.SellerRefundActivity" />
+        <activity android:name=".SellerFolder.SellerExchangeActivity" />
+        <activity android:name=".SellerFolder.SellerOrderDetailActivity" />
+        <activity android:name=".SellerFolder.SellerNumberActivity" />
+        <activity android:name=".SellerFolder.SellerProductChangeActivity" />
+        <activity android:name=".SellerFolder.SellerOrderActivity" />
+        <activity android:name=".SellerFolder.SellerContactWriteActivity" />
+        <activity android:name=".SellerFolder.SellerContactReviewActivity" />
+        <activity android:name=".SellerFolder.SellerCodiAddActivity" />
+        <activity
+                android:name=".SellerFolder.SellerProductUploadActivity"
+                android:windowSoftInputMode="adjustResize" />
+        <activity
+                android:name=".SellerFolder.EditorActivity"
+                android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".MyPageFolder.ReviewActivity" />
+        <activity android:name=".SettingFolder.ContactActivity" />
+        <activity android:name=".OrderFolder.OrderExchangeActivity" />
+        <activity android:name=".OrderFolder.OrderCancelActivity" />
+        <activity android:name=".OrderFolder.OrderDeliveryActivity" />
+        <activity android:name=".OrderFolder.OrderDetailActivity" />
+        <activity android:name=".OrderFolder.OrderListActivity" />
+
+        <uses-library
+                android:name="org.apache.http.legacy"
+                android:required="false" />
+
+        <activity android:name=".PayFolder.PayWebActivity" />
+        <activity android:name=".MyPageFolder.SearchAddressActivity" />
+        <activity android:name=".MyPageFolder.MyProductActivity" />
+        <activity android:name=".SettingFolder.LeaveActivity" />
+        <activity android:name=".SettingFolder.ScWebActivity" />
+        <activity android:name=".MyPageFolder.AddressActivity" />
+        <activity android:name=".SettingFolder.FaqActivity" />
+        <activity android:name=".SettingFolder.NoticeActivity" />
+        <activity android:name=".MyPageFolder.CouponActivity" />
+        <activity android:name=".MyPageFolder.PointActivity" />
+        <activity android:name=".MyPageFolder.InviteActivity" />
+        <activity android:name=".MyPageFolder.FollowingActivity" />
+        <activity android:name=".MyPageFolder.ProfileActivity" />
+        <activity android:name=".MyPageFolder.AlarmActivity" />
+        <activity android:name=".MyPageFolder.AlarmAcitivty" />
+        <activity android:name=".SearchFolder.SearchResultActivity" />
+        <activity android:name=".SearchFolder.SearchKeywordActivity" />
+        <activity android:name=".BrandFolder.BrandHomeActivity" />
+        <activity android:name=".SearchFolder.FilterActivity" />
+        <activity android:name=".PayFolder.DeliveryEditActivity" />
+        <activity android:name=".PayFolder.DelivieryAddActivity" />
+        <activity android:name=".PayFolder.PrePaidActivity" />
+        <activity android:name=".PayFolder.PayFreeActivity" />
+        <activity android:name=".SettingFolder.SettingActivity" />
+        <activity android:name=".ProductFolder.ProductContactWriteActivity" />
+        <activity android:name=".ProductFolder.ReviewMoreActivity" />
+        <activity android:name=".ProductFolder.ProductMainActivity" />
+        <activity android:name=".HomeFolder.HomeActivity" />
+        <activity android:name=".LoginFolder.PassResetActivity" />
+        <activity android:name=".LoginFolder.FindResultActivity" />
+        <activity android:name=".LoginFolder.FindActivity" />
+        <activity android:name=".LoginFolder.RegisterCompleteActivity" />
+        <activity
+                android:name=".LoginFolder.AddInfoActivity"
+                android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".LoginFolder.SocialRegisterActivity" />
+        <activity android:name=".LoginFolder.RegisterActivity" />
+        <activity android:name=".LoginFolder.AgreeActivity" />
+        <activity android:name=".LoginFolder.LoginActivity" />
+        <activity android:name=".SplashFolder.StartPopupActivity" />
+        <activity android:name=".SplashFolder.StartGuideActivity" />
+        <activity
+                android:name=".SplashFolder.MainActivity"
+                android:autoVerify="true"
+                android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="qr_read" />
+                <data
+                        android:host="sochic.app-pick.com"
+                        android:scheme="http" />
+                <data
+                        android:host="sochic.app-pick.com"
+                        android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".ProductFolder.ProductOptionActivity"
+                android:theme="@style/TransparentCompat" />
+
+        <service
+                android:name=".Util.Push.FirebaseMessagingService"
+                android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+                android:name="com.kakao.sdk.AppKey"
+                android:value="@string/kakao_app_key" />
+
+        <activity android:name="com.nhn.android.naverlogin.ui.OAuthLoginActivity" />
+        <activity
+                android:name="com.nhn.android.naverlogin.ui.OAuthLoginInAppBrowserActivity"
+                android:label="OAuth2.0 In-app" />
+    </application>
+
+</manifest>

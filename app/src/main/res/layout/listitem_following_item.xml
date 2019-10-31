@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/whiteColor"
+        android:orientation="vertical">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+        <TextView
+                android:id="@+id/nickLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@id/followBtn"
+                android:layout_toRightOf="@id/profileView"
+                android:fontFamily="@font/gothica1_regular"
+                android:text="TextView"
+                android:textColor="@color/blackColor"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+
+        <TextView
+                android:id="@+id/followBtn"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/grayborder_white_box"
+                android:fontFamily="@font/gothica1_regular"
+                android:gravity="center"
+                android:text="언팔"
+                android:textColor="@color/borderLineColor"
+                android:textSize="12sp" />
+
+        <ImageView
+                android:id="@+id/profileView"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                app:srcCompat="@drawable/profile_01" />
+
+    </RelativeLayout>
+</LinearLayout>

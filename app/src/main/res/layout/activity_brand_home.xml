@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/whiteColor"
+        tools:context=".BrandFolder.BrandHomeActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/cord"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/whiteColor"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:id="@+id/collapse_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                    app:titleEnabled="false">
+
+                <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:background="#ff0000"
+                        android:gravity="top"
+                        android:minHeight="?attr/actionBarSize"
+                        android:visibility="invisible"
+                        app:layout_collapseMode="pin"
+                        app:layout_scrollFlags="scroll|enterAlways"
+                        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+                <RelativeLayout
+                        android:id="@+id/contentLayer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="110dp">
+
+                    <androidx.percentlayout.widget.PercentRelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true"
+                                app:layout_aspectRatio="133%"
+                                app:layout_widthPercent="100%">
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="60dp">
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_centerInParent="true">
+
+                                        <RelativeLayout
+                                                android:layout_width="0dp"
+                                                android:layout_height="0dp"
+                                                android:layout_marginTop="15dp"
+                                                android:layout_marginBottom="15dp"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintDimensionRatio="1"
+                                                app:layout_constraintLeft_toLeftOf="parent"
+                                                app:layout_constraintRight_toRightOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent"
+                                                app:layout_constraintVertical_bias="1.0">
+
+                                            <ImageView
+                                                    android:id="@+id/inProfileView"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent" />
+                                        </RelativeLayout>
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="80dp">
+
+                                    <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical">
+
+                                        <TextView
+                                                android:id="@+id/inNickLabel"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center"
+                                                android:textColor="@color/blackColor"
+                                                android:textSize="16dp" />
+
+                                        <TextView
+                                                android:id="@+id/infoLabel"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="15dp"
+                                                android:gravity="center"
+                                                android:textColor="@color/borderLineColor"
+                                                android:textStyle="normal" />
+                                    </LinearLayout>
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </androidx.percentlayout.widget.PercentRelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:id="@+id/tabs"
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:layout_gravity="bottom">
+
+                    <RelativeLayout
+                            android:id="@+id/filterBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        <TextView
+                                android:id="@+id/followBtn"
+                                android:layout_width="70dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="15dp"
+                                android:background="@drawable/grayborder_white_box"
+                                android:gravity="center"
+                                android:text="팔로우"
+                                android:textColor="@color/borderLineColor"
+                                android:textSize="12sp" />
+
+                        <View
+                                android:id="@+id/view2"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@color/lineColor" />
+
+                        <com.google.android.material.tabs.TabLayout
+                                android:id="@+id/tabLayer"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="#00000000"
+                                app:tabGravity="fill"
+                                app:tabIndicatorColor="@color/colorPrimary"
+                                app:tabIndicatorHeight="1dp"
+                                app:tabMode="fixed"
+                                app:tabRippleColor="@color/whiteColor"
+                                app:tabSelectedTextColor="@color/colorPrimary"
+                                app:tabTextColor="@color/borderLineColor" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+                android:id="@+id/recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                        android:id="@+id/infoLayer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                    <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="15dp"
+                                android:text="사이즈"
+                                android:textColor="@color/blackColor"
+                                android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="30dp"
+                                android:gravity="top"
+                                android:orientation="horizontal">
+
+                            <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:text="키"
+                                    android:textSize="12sp" />
+
+                            <TextView
+                                    android:id="@+id/heightLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical"
+                                    android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="30dp"
+                                android:gravity="top"
+                                android:orientation="horizontal">
+
+                            <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:text="상의 사이즈"
+                                    android:textSize="12sp" />
+
+                            <TextView
+                                    android:id="@+id/topSizeLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical"
+                                    android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="30dp"
+                                android:gravity="top"
+                                android:orientation="horizontal">
+
+                            <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:text="하의 사이즈"
+                                    android:textSize="12sp" />
+
+                            <TextView
+                                    android:id="@+id/bottomSizeLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical"
+                                    android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="30dp"
+                                android:gravity="top"
+                                android:orientation="horizontal">
+
+                            <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:text="발 사이즈"
+                                    android:textSize="12sp" />
+
+                            <TextView
+                                    android:id="@+id/footSizeLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical"
+                                    android:text="TextView"
+                                    android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="30dp"
+                                android:layout_marginBottom="25dp"
+                                android:gravity="top"
+                                android:orientation="horizontal">
+
+                            <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:text="체형"
+                                    android:textSize="12sp" />
+
+                            <TextView
+                                    android:id="@+id/bodyFitLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical"
+                                    android:textSize="12sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="15dp"
+                                android:text="정보"
+                                android:textColor="@color/blackColor"
+                                android:textStyle="bold" />
+
+                        <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/lineColor" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="30dp"
+                                android:gravity="top"
+                                android:orientation="horizontal">
+
+                            <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:text="상호명"
+                                    android:textSize="12sp" />
+
+                            <TextView
+                                    android:id="@+id/shopNameLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical"
+                                    android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="30dp"
+                                android:gravity="top"
+                                android:orientation="horizontal">
+
+                            <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:text="대표"
+                                    android:textSize="12sp" />
+
+                            <TextView
+                                    android:id="@+id/shopCeoLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical"
+                                    android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="30dp"
+                                android:gravity="top"
+                                android:orientation="horizontal">
+
+                            <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:text="사업자번호"
+                                    android:textSize="12sp" />
+
+                            <TextView
+                                    android:id="@+id/shopNumberLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical"
+                                    android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="30dp"
+                                android:gravity="top"
+                                android:orientation="horizontal">
+
+                            <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:text="통신판매업번호"
+                                    android:textSize="12sp" />
+
+                            <TextView
+                                    android:id="@+id/shopTelNumberLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical"
+                                    android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="30dp"
+                                android:layout_marginBottom="25dp"
+                                android:gravity="top"
+                                android:orientation="horizontal">
+
+                            <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:text="사업장 소재지"
+                                    android:textSize="12sp" />
+
+                            <TextView
+                                    android:id="@+id/shopAddressLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical"
+                                    android:textSize="12sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="15dp"
+                                android:text="고객센터"
+                                android:textColor="@color/blackColor"
+                                android:textStyle="bold" />
+
+                        <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/lineColor" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginRight="30dp"
+                                android:orientation="horizontal">
+
+                            <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:text="CS시간"
+                                    android:textSize="12sp" />
+
+                            <TextView
+                                    android:id="@+id/csTimeLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical"
+                                    android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="30dp"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="horizontal">
+
+                            <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:text="전화번호"
+                                    android:textSize="12sp" />
+
+                            <TextView
+                                    android:id="@+id/csNumberLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical"
+                                    android:textSize="12sp" />
+
+                            <TextView
+                                    android:id="@+id/callBtn"
+                                    android:layout_width="90dp"
+                                    android:layout_height="35dp"
+                                    android:background="@drawable/category_select_layer"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:text="전화걸기"
+                                    android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginRight="30dp"
+                                android:layout_marginBottom="30dp"
+                                android:orientation="horizontal">
+
+                            <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:text="이메일"
+                                    android:textSize="12sp" />
+
+                            <TextView
+                                    android:id="@+id/csEmailLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical"
+                                    android:textSize="12sp" />
+
+                            <TextView
+                                    android:id="@+id/emailBtn"
+                                    android:layout_width="90dp"
+                                    android:layout_height="35dp"
+                                    android:background="@drawable/category_select_layer"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:text="이메일 복사"
+                                    android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/reviewRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/productRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/whiteColor">
+
+        <View
+                android:id="@+id/view27"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/lineColor" />
+
+        <RelativeLayout
+                android:id="@+id/topProfileView"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="60dp"
+                android:visibility="gone">
+
+            <ImageView
+                    android:id="@+id/profileView"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop" />
+
+            <TextView
+                    android:id="@+id/nickLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginRight="120dp"
+                    android:text="TextView"
+                    android:textSize="13sp" />
+
+        </RelativeLayout>
+
+        <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="false"
+                android:padding="15dp"
+                app:srcCompat="@drawable/back" />
+
+        <ImageView
+                android:id="@+id/instaBtn"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="60dp"
+                android:paddingStart="30dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                app:srcCompat="@drawable/insta" />
+
+        <ImageView
+                android:id="@+id/shareBtn"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:paddingStart="15dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="15dp"
+                app:srcCompat="@drawable/share" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">소식</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="kakao_app_key">3c33496a972efe5317c447212af6360b</string>
+</resources>

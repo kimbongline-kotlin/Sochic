@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content" android:background="@color/whiteColor">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+        <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp" android:src="@drawable/more" android:id="@+id/moreBtn"
+                android:layout_alignParentRight="true" android:padding="15dp"/>
+
+        <ImageView
+                android:id="@+id/profileView"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop" />
+
+        <TextView
+                android:id="@+id/nickLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:textSize="13sp" />
+    </RelativeLayout>
+    <androidx.percentlayout.widget.PercentRelativeLayout android:layout_width="match_parent"
+                                                         android:layout_height="wrap_content">
+
+        <RelativeLayout
+                android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentStart="true" app:layout_aspectRatio="100%" app:layout_widthPercent="100%">
+
+            <com.youth.banner.Banner android:layout_width="match_parent"
+                                     android:layout_height="match_parent"
+                                     android:id="@+id/sImageView"
+                                     app:image_scale_type="center_crop"
+            ></com.youth.banner.Banner>
+            <TextView
+                    android:text="00:00:00"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:id="@+id/timerLabel"
+                    android:gravity="center_horizontal" android:background="#50000000" android:padding="20dp"
+                    android:textStyle="bold" android:textSize="20sp" android:textColor="@color/whiteColor"/>
+        </RelativeLayout>
+    </androidx.percentlayout.widget.PercentRelativeLayout>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+        <TextView
+                android:id="@+id/likeLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:textSize="12sp" />
+
+        <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp" android:src="@drawable/save_icon" android:id="@+id/saveBtn"
+                android:padding="5dp" android:layout_alignParentRight="true" android:layout_marginRight="15dp"/>
+        <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp" android:src="@drawable/like_icon" android:id="@+id/likeBtn"
+                android:padding="5dp" android:layout_marginLeft="15dp"/>
+    </RelativeLayout>
+
+    <TextView
+            android:id="@+id/titleLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="15dp"
+            android:textSize="14sp" />
+
+    <TextView
+            android:id="@+id/textLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/borderLineColor"
+            android:textSize="13sp"
+            android:visibility="visible" />
+</LinearLayout>

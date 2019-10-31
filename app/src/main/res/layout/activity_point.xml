@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/whiteColor"
+        tools:context=".MyPageFolder.PointActivity">
+
+    <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <View
+                android:id="@+id/view12"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/lineColor" />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="포인트"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+        <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="false"
+                android:padding="15dp"
+                app:srcCompat="@drawable/back" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:id="@+id/cord"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                    android:id="@+id/appBarLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/whiteColor"
+                    android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                        android:id="@+id/collapse_toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                        app:titleEnabled="false">
+
+                    <androidx.appcompat.widget.Toolbar
+                            android:id="@+id/toolbar"
+                            android:layout_width="match_parent"
+                            android:layout_height="51dp"
+                            android:background="#ff0000"
+                            android:gravity="top"
+                            android:minHeight="?attr/actionBarSize"
+                            android:visibility="invisible"
+                            app:layout_collapseMode="pin"
+                            app:layout_scrollFlags="scroll|enterAlways"
+                            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+                    <RelativeLayout
+                            android:id="@+id/contentLayer"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_marginBottom="51dp">
+
+                        <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" >
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:paddingLeft="30dp"
+                                    android:paddingRight="30dp">
+
+                                <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1">
+
+                                    <TextView
+                                            android:id="@+id/myPointLabel"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_centerVertical="true"
+                                            android:layout_toRightOf="@id/textView42"
+                                            android:gravity="right"
+                                            android:text="TextView"
+                                            android:textColor="@color/blackColor"
+                                            android:textSize="16dp"
+                                            android:textStyle="bold" />
+
+                                    <TextView
+                                            android:id="@+id/textView42"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginRight="10dp"
+                                            android:text="사용 가능한 포인트"
+                                            android:textColor="@color/blackColor"
+                                            android:textSize="12sp"
+                                            android:textStyle="normal" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1">
+
+                                    <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="45dp"
+                                            android:layout_centerVertical="true"
+                                            android:background="@drawable/grayborder_white_box">
+
+                                        <Spinner
+                                                android:id="@+id/durationSpinner"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="45dp" />
+
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                            android:id="@+id/tabs"
+                            android:layout_width="match_parent"
+                            android:layout_height="51dp"
+                            android:layout_gravity="bottom">
+
+                        <View
+                                android:id="@+id/view32"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@color/lineColor" />
+
+                        <com.google.android.material.tabs.TabLayout
+                                android:id="@+id/tabLayer"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentBottom="false"
+                                android:background="#00000000"
+                                app:tabGravity="fill"
+                                app:tabIndicatorColor="@color/colorPrimary"
+                                app:tabIndicatorHeight="1dp"
+                                app:tabMode="fixed"
+                                app:tabRippleColor="@color/whiteColor"
+                                app:tabSelectedTextColor="@color/colorPrimary"
+                                app:tabTextColor="@color/borderLineColor" />
+
+                    </RelativeLayout>
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

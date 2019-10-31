@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content" android:background="@color/whiteColor">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+        <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp" app:srcCompat="@color/blackColor" android:id="@+id/profileView"
+                android:layout_centerVertical="true" android:layout_marginLeft="15dp" android:adjustViewBounds="true"
+                android:scaleType="centerCrop"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/nickLabel" android:layout_centerVertical="true"
+                android:layout_marginLeft="60dp" android:textSize="13sp" android:layout_marginRight="100dp"/>
+        <TextView
+                android:text="팔로우"
+                android:layout_width="70dp"
+                android:layout_height="30dp" android:id="@+id/followBtn" android:layout_centerVertical="true"
+                android:layout_alignParentRight="true" android:layout_marginRight="15dp"
+                android:background="@drawable/grayborder_white_box" android:gravity="center" android:textSize="12sp"
+                android:textColor="@color/borderLineColor"/>
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/recycler" android:paddingLeft="7.5dp"
+            android:paddingRight="7.5dp" android:clipToPadding="true"/>
+</LinearLayout>
